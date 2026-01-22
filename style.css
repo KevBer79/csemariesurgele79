@@ -1,14 +1,17 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* HEADER */
 header {
-    background: #1e88e5;
+    background: #E91E63;
     color: white;
     padding: 15px 30px;
     display: flex;
@@ -18,7 +21,7 @@ header {
 
 header .logo {
     font-size: 1.4em;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 nav ul {
@@ -30,7 +33,7 @@ nav ul {
 nav a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 nav a:hover {
@@ -39,15 +42,16 @@ nav a:hover {
 
 /* BANNIÈRE */
 .banner {
-    background: linear-gradient(to right, #1e88e5, #42a5f5);
+    background: linear-gradient(to right, #E91E63, #F8BBD0);
     color: white;
     text-align: center;
     padding: 60px 20px;
 }
 
 .banner h1 {
-    font-size: 2.2em;
+    font-size: 2.4em;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 /* ACTUALITÉS */
@@ -59,6 +63,7 @@ nav a:hover {
 .actus h2 {
     font-size: 2em;
     margin-bottom: 30px;
+    color: #880E4F;
 }
 
 .cards {
@@ -71,10 +76,15 @@ nav a:hover {
 .card {
     background: white;
     width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     overflow: hidden;
     text-align: left;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card img {
@@ -84,6 +94,7 @@ nav a:hover {
 .card h3 {
     padding: 15px;
     font-size: 1.3em;
+    color: #E91E63;
 }
 
 .card p {
@@ -93,21 +104,21 @@ nav a:hover {
 
 .btn {
     display: block;
-    background: #1e88e5;
+    background: #E91E63;
     color: white;
     text-align: center;
     padding: 10px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .btn:hover {
-    background: #1565c0;
+    background: #880E4F;
 }
 
 /* FOOTER */
 footer {
-    background: #1e88e5;
+    background: #E91E63;
     color: white;
     text-align: center;
     padding: 20px;
