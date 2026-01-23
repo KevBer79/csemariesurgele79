@@ -1,11 +1,11 @@
 [
   {
     "categorie": "Cinéma",
-    "titre": "Cinéma CGR",
-    "description": "Place valable dans tous les CGR.",
+    "titre": "Cinéma le Kiosque",
+    "description": "Cinéma à Bressuire.",
     "prix": "0 €",
     "image": "images/cinema.jpg",
-    "lien": "#"
+    "lien": "https://lefauteuilrouge.fr/FR/9/cinema-le-fauteuil-rouge-bressuire.html"
   },
   {
     "categorie": "Parcs",
