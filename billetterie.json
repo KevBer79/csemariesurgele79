@@ -1,0 +1,34 @@
+[
+  {
+    "categorie": "Cinéma",
+    "titre": "Cinéma CGR",
+    "description": "Place valable dans tous les CGR.",
+    "prix": "6,20 €",
+    "image": "images/cinema.jpg",
+    "lien": "#"
+  },
+  {
+    "categorie": "Parcs",
+    "titre": "Puy du Fou",
+    "description": "Billet adulte pour le Grand Parc.",
+    "prix": "32,00 €",
+    "image": "images/puydufou.jpg",
+    "lien": "#"
+  },
+  {
+    "categorie": "Parcs",
+    "titre": "Futuroscope",
+    "description": "Billet 1 jour adulte.",
+    "prix": "39,00 €",
+    "image": "images/futuroscope.jpg",
+    "lien": "#"
+  },
+  {
+    "categorie": "Spectacles",
+    "titre": "Zénith de Nantes",
+    "description": "Tarif réduit sur une sélection de spectacles.",
+    "prix": "Variable",
+    "image": "images/spectacle.jpg",
+    "lien": "#"
+  }
+]
