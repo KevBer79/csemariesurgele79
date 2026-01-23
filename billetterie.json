@@ -3,7 +3,7 @@
     "categorie": "Cinéma",
     "titre": "Cinéma CGR",
     "description": "Place valable dans tous les CGR.",
-    "prix": "6,20 €",
+    "prix": "0 €",
     "image": "images/cinema.jpg",
     "lien": "#"
   },
@@ -11,7 +11,7 @@
     "categorie": "Parcs",
     "titre": "Puy du Fou",
     "description": "Billet adulte pour le Grand Parc.",
-    "prix": "32,00 €",
+    "prix": "0 €",
     "image": "images/puydufou.jpg",
     "lien": "#"
   },
@@ -19,7 +19,7 @@
     "categorie": "Parcs",
     "titre": "Futuroscope",
     "description": "Billet 1 jour adulte.",
-    "prix": "39,00 €",
+    "prix": "0 €",
     "image": "images/futuroscope.jpg",
     "lien": "#"
   },
