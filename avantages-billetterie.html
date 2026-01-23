@@ -23,7 +23,12 @@
 
 <section class="billetterie">
     <h1>Billetterie du CSE</h1>
-    <p>Choisissez une catégorie pour découvrir les offres disponibles.</p>
+    <p>Choisissez une catégorie pour découvrir les tarifs disponibles.</p>
+
+    <!-- BOUTON BON DE COMMANDE -->
+    <a href="documents/bon-de-commande-billetterie.pdf" class="btn" target="_blank">
+        Télécharger le bon de commande
+    </a>
 
     <!-- FILTRES -->
     <div id="categories" class="categories"></div>
@@ -86,7 +91,6 @@
                 <h3>${offre.titre}</h3>
                 <p>${offre.description}</p>
                 <p class="prix">${offre.prix}</p>
-                <a class="btn" href="${offre.lien}">Voir l'offre</a>
             `;
 
             container.appendChild(card);
