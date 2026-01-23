@@ -12,7 +12,7 @@
     "titre": "Puy du Fou",
     "description": "Billet adulte pour le Grand Parc.",
     "prix": "0 €",
-    "image": "images/puydufou.jpg",
+    "image": "images/parc.png",
     "lien": "#"
   },
   {
@@ -20,7 +20,7 @@
     "titre": "Futuroscope",
     "description": "Billet 1 jour adulte.",
     "prix": "0 €",
-    "image": "images/futuroscope.jpg",
+    "image": "images/parc.png",
     "lien": "#"
   },
   {
@@ -28,7 +28,7 @@
     "titre": "Zénith de Nantes",
     "description": "Tarif réduit sur une sélection de spectacles.",
     "prix": "Variable",
-    "image": "images/spectacle.jpg",
+    "image": "images/spectacle.png",
     "lien": "#"
   }
 ]
