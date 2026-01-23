@@ -1,0 +1,23 @@
+[
+  {
+    "prestataire": "Vente de Chocolats",
+    "description": "Commandes groupées de chocolats pour Noël.",
+    "periode": "Octobre → Novembre",
+    "image": "images/chocolats.jpg",
+    "lien": "https://www.exemple-chocolats.fr"
+  },
+  {
+    "prestataire": "Vente de Fromages",
+    "description": "Sélection de fromages artisanaux.",
+    "periode": "Mars → Avril",
+    "image": "images/fromages.jpg",
+    "lien": "https://www.exemple-fromages.fr"
+  },
+  {
+    "prestataire": "Vente de Saucissons",
+    "description": "Commande groupée de charcuterie.",
+    "periode": "Juin",
+    "image": "images/saucissons.jpg",
+    "lien": "https://www.exemple-saucissons.fr"
+  }
+]
