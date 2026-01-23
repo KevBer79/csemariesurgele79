@@ -291,3 +291,19 @@ nav a.active {
     color: var(--primary);
     margin-top: 10px;
 }
+
+.adv-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.adv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
