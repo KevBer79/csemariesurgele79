@@ -197,3 +197,11 @@ footer {
     height: 120px;
     resize: vertical;
 }
+
+/* LIEN ACTIF DANS LE MENU */
+nav a.active {
+    color: var(--primary);
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 3px;
+}
