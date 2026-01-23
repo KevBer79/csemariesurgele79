@@ -167,3 +167,33 @@ footer {
     text-align: center;
     margin-top: 40px;
 }
+
+.contact-box {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 300px;
+    margin: 20px auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: var(--radius);
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
