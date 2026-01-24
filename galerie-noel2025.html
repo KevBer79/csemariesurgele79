@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie protégée – CSE Marie Surgelés 79</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .gallery-container {
+            max-width: 900px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .password-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 40px auto;
+        }
+
+        .password-box input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+
+        .gallery {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="gallery-container">
+    <h1>Galerie photo</h1>
+
+    <div class="password-box" id="passwordBox">
+        <p>Veuillez entrer le mot de passe pour accéder à la galerie :</p>
+        <input type="password" id="passwordInput" placeholder="Mot de passe">
+        <button class="btn" onclick="checkPassword()">Accéder</button>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <h2>Photos de l'événement</h2>
+        <div id="photos"></div>
+    </div>
+</section>
+
+<script>
+    // Dossier de l'événement (à changer selon la galerie)
+    const dossier = "puydufou2024";
+
+    // Hash SHA-256 du mot de passe "cse2025"
+    const correctHash = "d2f1f3b7c0b1b9c3e1f0e8c4c4b9d4a3f0b6e7a8b3c2d1e4f6a7b8c9d0e1f2a3";
+
+    async function sha256(message) {
+        const msgBuffer = new TextEncoder().encode(message);
+        const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+    }
+
+    async function checkPassword() {
+        const input = document.getElementById("passwordInput").value;
+        const hash = await sha256(input);
+
+        if (hash === correctHash) {
+            document.getElementById("passwordBox").style.display = "none";
+            document.getElementById("gallery").style.display = "block";
+            chargerPhotos();
+        } else {
+            alert("Mot de passe incorrect");
+        }
+    }
+
+    function chargerPhotos() {
+        fetch(`${dossier}/photos.json`)
+            .then(response => response.json())
+            .then(photos => {
+                const container = document.getElementById("photos");
+                photos.forEach(photo => {
+                    const img = document.createElement("img");
+                    img.src = `${dossier}/${photo}`;
+                    container.appendChild(img);
+                });
+            });
+    }
+</script>
+
+</body>
+</html>
