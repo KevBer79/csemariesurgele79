@@ -1,0 +1,36 @@
+[
+  {
+    "titre": "Événements familiaux",
+    "icone": "🎁",
+    "description": "Le CSE peut attribuer un bon cadeau à l’occasion de certains événements familiaux.",
+    "details": "Exemples : naissance ou adoption, mariage ou PACS, départ à la retraite. Les montants et conditions sont précisés dans le règlement intérieur du CSE.",
+    "type": "information"
+  },
+  {
+    "titre": "Chèques vacances",
+    "icone": "🏖️",
+    "description": "Le CSE peut participer au financement de vos chèques vacances.",
+    "details": "Une demande doit être faite auprès du CSE via le formulaire dédié.",
+    "type": "formulaire",
+    "document": "documents/demande-cheques-vacances.pdf",
+    "libelleDocument": "Télécharger la demande de chèques vacances"
+  },
+  {
+    "titre": "Aide au logement / organisme partenaire",
+    "icone": "🏠",
+    "description": "Le CSE met en avant un organisme partenaire pour vous accompagner dans vos démarches logement ou formation.",
+    "details": "Renseignez-vous directement auprès de l’organisme pour connaître les conditions d’éligibilité.",
+    "type": "partenaire",
+    "lienExterne": "https://www.actionlogement.fr",
+    "libelleLien": "Voir le site du partenaire"
+  },
+  {
+    "titre": "Prise en charge des voyages scolaires",
+    "icone": "🧒",
+    "description": "Le CSE peut prendre en charge une partie des frais de voyages scolaires de vos enfants.",
+    "details": "La participation est soumise à conditions (niveau scolaire, type de voyage, justificatifs…).",
+    "type": "formulaire",
+    "document": "documents/demande-voyage-scolaire.pdf",
+    "libelleDocument": "Télécharger la demande de prise en charge"
+  }
+]
