@@ -31,4 +31,12 @@
     "image": "images/spectacle.png",
     "lien": "#"
   }
+  {
+    "categorie": "Loisirs",
+    "titre": "Bassin du Thouet",
+    "description": "Piscine à Thouars.",
+    "prix": "0 €",
+    "image": "images/loisirs.png",
+    "lien": "#"
+  },
 ]
