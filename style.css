@@ -182,6 +182,15 @@ footer .footer-link {
 footer .footer-link:hover {
     color: var(--primary);
 }
+footer .whatsapp {
+    color: #25D366; /* vert WhatsApp */
+    font-weight: 600;
+}
+
+footer .whatsapp:hover {
+    color: #1da851;
+}
+
 
 
 .contact-box {
