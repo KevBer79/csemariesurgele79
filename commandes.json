@@ -1,5 +1,12 @@
 [
   {
+    "prestataire": "Vente de Parfum",
+    "description": "Commandes de parfum et de cosmétiques.",
+    "periode": "Toute l'année",
+    "image": "images/cosmétique.png",
+    "lien": "https://www.lagrandeparfumerie.com/mon-compte/"
+  },
+  {
     "prestataire": "Vente de Chocolats",
     "description": "Commandes groupées de chocolats pour Noël.",
     "periode": "Octobre → Novembre",
