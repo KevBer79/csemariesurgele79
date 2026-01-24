@@ -402,3 +402,33 @@ nav a.active {
     background: var(--primary);
     color: white;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 18px;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav a.active {
+        border-bottom: 2px solid var(--primary);
+    }
+
+    .logo img {
+        height: 80px;
+    }
+}
