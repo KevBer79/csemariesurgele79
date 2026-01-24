@@ -30,7 +30,7 @@
     "prix": "Variable",
     "image": "images/spectacle.png",
     "lien": "#"
-  }
+  },
   {
     "categorie": "Loisirs",
     "titre": "Bassin du Thouet",
@@ -38,5 +38,5 @@
     "prix": "0 €",
     "image": "images/loisirs.png",
     "lien": "#"
-  },
+  }
 ]
