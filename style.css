@@ -170,6 +170,20 @@ footer {
     margin-top: 40px;
 }
 
+footer .footer-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+footer .footer-link:hover {
+    color: var(--primary);
+}
+
+
 .contact-box {
     background: var(--bg-light);
     padding: 20px;
@@ -436,5 +450,32 @@ nav a.active {
         border-bottom: 2px solid var(--primary);
         padding-bottom: 2px;
     }
+}
+
+/* -------------------- */
+/* MENTIONS LÉGALES */
+/* -------------------- */
+
+.mentions {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.mentions-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.mentions-box h2 {
+    margin-top: 25px;
+    color: var(--primary);
+}
+
+.mentions-box p {
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
