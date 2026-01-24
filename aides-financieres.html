@@ -73,6 +73,26 @@
 
     ${aide.details ? `<p class="details">${aide.details}</p>` : ""}
 
+    ${aide.montants ? `
+<table class="montants-table">
+  <thead>
+    <tr>
+      <th>Événement</th>
+      <th>Montant</th>
+    </tr>
+  </thead>
+  <tbody>
+    ${aide.montants.map(item => `
+      <tr>
+        <td>${item.evenement}</td>
+        <td>${item.montant}</td>
+      </tr>
+    `).join("")}
+  </tbody>
+</table>
+` : ""}
+
+
     ${actionsHtml ? `<div class="aide-actions">${actionsHtml}</div>` : ""}
 `;
 

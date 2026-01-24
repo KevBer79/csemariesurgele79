@@ -535,3 +535,19 @@ nav a.active {
     flex-wrap: wrap;
     gap: 10px;
 }
+
+.montants-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.montants-table th,
+.montants-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.montants-table thead {
+  background: #f2f2f2;
+}
