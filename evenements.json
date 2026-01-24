@@ -1,0 +1,27 @@
+{
+  "a_venir": [
+    {
+      "titre": "Sortie au Futuroscope",
+      "icone": "🎢",
+      "date": "15 juin 2025",
+      "description": "Journée familiale organisée par le CSE avec tarif préférentiel.",
+      "document": "documents/inscription-futuroscope.pdf",
+      "libelleDocument": "Télécharger le bulletin d'inscription"
+    },
+    {
+      "titre": "Arbre de Noël",
+      "icone": "🎄",
+      "date": "20 décembre 2025",
+      "description": "Spectacle, goûter et distribution de cadeaux pour les enfants."
+    }
+  ],
+  "passes": [
+    {
+      "titre": "Sortie Puy du Fou",
+      "icone": "🔥",
+      "date": "12 septembre 2024",
+      "description": "Une journée mémorable avec plus de 120 participants.",
+      "photos": "galerie/puydufou2024.html"
+    }
+  ]
+}

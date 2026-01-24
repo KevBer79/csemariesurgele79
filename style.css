@@ -488,3 +488,50 @@ nav a.active {
     line-height: 1.6;
 }
 
+/* -------------------- */
+/* ÉVÉNEMENTS */
+/* -------------------- */
+
+.evenements {
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.event-card {
+    width: 300px;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    text-align: left;
+}
+
+.event-card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.event-card .date {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.event-card p {
+    color: var(--text-light);
+}
+
+.event-actions {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
