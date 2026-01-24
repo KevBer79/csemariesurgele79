@@ -6,7 +6,7 @@
   "details": "Exemples : naissance ou adoption, mariage ou PACS, départ à la retraite.",
   "montants": [
     { "evenement": "Naissance / Adoption", "montant": "50 €" },
-    { "evenement": "Mariage / PACS", "montant": "80 €" },
+    { "evenement": "Mariage ou PACS", "montant": "80 €" },
     { "evenement": "Départ à la retraite", "montant": "100 €" },
     { "evenement": "Noël (par enfant)", "montant": "30 €" }
   ],
