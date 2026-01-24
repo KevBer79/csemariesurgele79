@@ -11,6 +11,7 @@
     "icone": "🏖️",
     "description": "Le CSE peut participer au financement de vos chèques vacances.",
     "details": "Une demande doit être faite auprès du CSE via le formulaire dédié.",
+    "periode": "Mars → Avril",
     "type": "formulaire",
     "document": "documents/demande-cheques-vacances.pdf",
     "libelleDocument": "Télécharger la demande de chèques vacances"

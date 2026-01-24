@@ -64,6 +64,7 @@
                 card.innerHTML = `
                     <h3>${aide.icone ? aide.icone + " " : ""}${aide.titre}</h3>
                     <p>${aide.description}</p>
+                    <p class="periode"><strong>Période :</strong> ${item.periode}</p>
                     ${aide.details ? `<p class="details">${aide.details}</p>` : ""}
                     ${actionsHtml ? `<div class="aide-actions">${actionsHtml}</div>` : ""}
                 `;
