@@ -1,42 +1,106 @@
 [
   {
     "categorie": "Cinéma",
-    "titre": "Cinéma le Kiosque",
+    "titre": "Cinéma le Fauteil Rouge",
     "description": "Cinéma à Bressuire.",
-    "prix": "0 €",
+    "prix": "5 €",
     "image": "images/cinema.png",
     "lien": "https://lefauteuilrouge.fr/FR/9/cinema-le-fauteuil-rouge-bressuire.html"
+  },
+  {
+    "categorie": "Cinéma",
+    "titre": "Cinéma le Kiosque",
+    "description": "Cinéma à Thouars.",
+    "prix": "5 €",
+    "image": "images/cinema.png",
+    "lien": "https://www.cinema-lekiosque.fr/#/"
   },
   {
     "categorie": "Parcs",
     "titre": "Puy du Fou",
     "description": "Billet adulte pour le Grand Parc.",
-    "prix": "0 €",
+    "prix": "34 €",
     "image": "images/parc.png",
     "lien": "#"
   },
   {
     "categorie": "Parcs",
-    "titre": "Futuroscope",
-    "description": "Billet 1 jour adulte.",
-    "prix": "0 €",
+    "titre": "Puy du Fou",
+    "description": "Billet enfant pour le Grand Parc.",
+    "prix": "20 €",
     "image": "images/parc.png",
     "lien": "#"
   },
   {
-    "categorie": "Spectacles",
-    "titre": "Zénith de Nantes",
-    "description": "Tarif réduit sur une sélection de spectacles.",
-    "prix": "Variable",
-    "image": "images/spectacle.png",
+    "categorie": "Parcs",
+    "titre": "Puy du Fou",
+    "description": "Billet Cinéscénie.",
+    "prix": "20 €",
+    "image": "images/parc.png",
     "lien": "#"
   },
   {
     "categorie": "Loisirs",
     "titre": "Bassin du Thouet",
-    "description": "Piscine à Thouars.",
-    "prix": "0 €",
+    "description": "Billet Adulte, Piscine à Thouars.",
+    "prix": "3 €",
     "image": "images/loisirs.png",
+    "lien": "#"
+  },
+  {
+    "categorie": "Loisirs",
+    "titre": "Bassin du Thouet",
+    "description": "Billet Enfant, Piscine à Thouars.",
+    "prix": "3 €",
+    "image": "images/loisirs.png",
+    "lien": "#"
+  },
+  {
+    "categorie": "Zoo",
+    "titre": "Zoo Parc de Beauval",
+    "description": "Billet Adulte.",
+    "prix": "27 €",
+    "image": "images/zoo.png",
+    "lien": "#"
+  },
+  {
+    "categorie": "Zoo",
+    "titre": "Zoo Parc de Beauval",
+    "description": "Billet Enfant.",
+    "prix": "23 €",
+    "image": "images/zoo.png",
+    "lien": "#"
+  },
+  {
+    "categorie": "Zoo",
+    "titre": "Zoo Bioparc de Doué",
+    "description": "Billet Adulte.",
+    "prix": "17 €",
+    "image": "images/zoo.png",
+    "lien": "#"
+  },
+  {
+    "categorie": "Zoo",
+    "titre": "Zoo Bioparc de Doué",
+    "description": "Billet Enfant.",
+    "prix": "15 €",
+    "image": "images/zoo.png",
+    "lien": "#"
+  },
+  {
+    "categorie": "Zoo",
+    "titre": "Planète Sauvage",
+    "description": "Billet Adulte.",
+    "prix": "20 €",
+    "image": "images/zoo.png",
+    "lien": "#"
+  },
+  {
+    "categorie": "Zoo",
+    "titre": "Planète Sauvage",
+    "description": "Billet Enfant.",
+    "prix": "15 €",
+    "image": "images/zoo.png",
     "lien": "#"
   }
 ]
