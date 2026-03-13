@@ -2,12 +2,12 @@
   {
   "titre": "Événements familiaux",
   "icone": "🎁",
-  "description": "Le CSE peut attribuer un bon cadeau à l’occasion de certains événements familiaux.",
+  "description": "Le CSE peut attribuer un bon cadeau ou un cadeau à l’occasion de certains événements familiaux.",
   "details": "Exemples : naissance ou adoption, mariage ou PACS, départ à la retraite.",
   "montants": [
     { "evenement": "Naissance / Adoption", "montant": "50 €" },
-    { "evenement": "Mariage ou PACS", "montant": "80 €" },
-    { "evenement": "Départ à la retraite", "montant": "100 €" },
+    { "evenement": "Mariage ou PACS", "montant": "40 €" },
+    { "evenement": "Médaille du travail", "montant": "40 €" },
     { "evenement": "Noël (par enfant)", "montant": "30 €" }
   ],
   "type": "information"
