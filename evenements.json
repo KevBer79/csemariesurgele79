@@ -1,18 +1,18 @@
 {
   "a_venir": [
     {
-      "titre": "Sortie au Futuroscope",
-      "icone": "🎢",
-      "date": "15 juin 2025",
-      "description": "Journée familiale organisée par le CSE avec tarif préférentiel.",
-      "document": "documents/inscription-futuroscope.pdf",
-      "libelleDocument": "Télécharger le bulletin d'inscription"
+      "titre": "Voyage il Maurice",
+      "icone": "🏖️",
+      "date": "13 au 22 Novembre 2026",
+      "description": "Voyage organisée par le CSE avec tarif préférentiel.",
+      <!--"document": "documents/inscription-futuroscope.pdf",
+      "libelleDocument": "Télécharger le bulletin d'inscription"-->
     },
     {
       "titre": "Arbre de Noël",
       "icone": "🎄",
-      "date": "20 décembre 2025",
-      "description": "Spectacle, goûter et distribution de cadeaux pour les enfants."
+      "date": "06 décembre 2026",
+      "description": "Spectacle, goûter et distribution de cadeaux pour les enfants et les parents."
     }
   ],
   "passes": [
