@@ -5,8 +5,8 @@
       "icone": "🏖️",
       "date": "13 au 22 Novembre 2026",
       "description": "Voyage organisée par le CSE avec tarif préférentiel.",
-      <!--"document": "documents/inscription-futuroscope.pdf",
-      "libelleDocument": "Télécharger le bulletin d'inscription"-->
+      "document": null,
+      "libelleDocument": null
     },
     {
       "titre": "Arbre de Noël",
