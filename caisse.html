@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Mini Caisse</title>
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        flex: 1 1 300px;
+        max-width: 350px;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .product {
+        padding: 10px;
+        margin: 5px 0;
+        background: #f2f2f2;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .product:hover {
+        background: #e0e0e0;
+    }
+
+    .client-item {
+        padding: 5px;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+    }
+
+    .client-item:hover {
+        background: #eee;
+    }
+
+    #searchClient {
+        margin-top: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+
+    #clientList {
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+    }
+
+    #cart {
+        padding-left: 20px;
+        max-height: 250px;
+        overflow-y: auto;
+    }
+
+    .remove-btn {
+        color: red;
+        cursor: pointer;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    button {
+        padding: 8px 12px;
+        margin-right: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Zone Client -->
+<div class="box">
+    <h2>Client</h2>
+
+    <p><strong>Importer fichier Excel :</strong></p>
+    <input type="file" id="excelFile" accept=".xlsx,.xls">
+
+    <input type="text" id="searchClient" placeholder="Rechercher un client..." onkeyup="filterClients()">
+    <div id="clientList"></div>
+
+    <p><strong>Client sélectionné :</strong> <span id="selectedClient">Aucun</span></p>
+</div>
+
+<!-- Zone Produits -->
+<div class="box">
+    <h2>Produits</h2>
+    <div id="productList"></div>
+</div>
+
+<!-- Zone Panier / Total -->
+<div class="box">
+    <h2>Panier</h2>
+    <ul id="cart"></ul>
+    <h3>Total : <span id="total">0.00</span> €</h3>
+
+    <button onclick="saveSale()">Valider la vente</button>
+    <button onclick="exportSales()">Exporter les ventes</button>
+</div>
+
+<script>
+// --- Clients (chargés depuis Excel) ---
+let clients = [];
+
+// Lecture Excel
+document.getElementById("excelFile").addEventListener("change", function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function(evt) {
+        const data = evt.target.result;
+        const workbook = XLSX.read(data, { type: "binary" });
+
+        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+        const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+        // On récupère toutes les cellules non vides de la première colonne
+        clients = json
+            .map(row => row[0])
+            .filter(x => x && x.toString().trim() !== "");
+
+        displayClients(clients);
+    };
+
+    reader.readAsBinaryString(file);
+});
+
+// Affichage clients
+function displayClients(list) {
+    const container = document.getElementById("clientList");
+    container.innerHTML = "";
+    list.forEach(client => {
+        const div = document.createElement("div");
+        div.className = "client-item";
+        div.textContent = client;
+        div.onclick = () => {
+            document.getElementById("selectedClient").textContent = client;
+        };
+        container.appendChild(div);
+    });
+}
+
+// Filtre client
+function filterClients() {
+    const search = document.getElementById("searchClient").value.toLowerCase();
+    const filtered = clients.filter(c => c.toLowerCase().includes(search));
+    displayClients(filtered);
+}
+
+// --- Produits ---
+const products = [
+    { name: "Produit A", price: 5 },
+    { name: "Produit B", price: 8 },
+    { name: "Produit C", price: 12 },
+    { name: "Produit D", price: 3 },
+    { name: "Produit E", price: 15 },
+    { name: "Produit F", price: 7 }
+];
+
+let cart = [];
+let sales = []; // stockage des ventes
+
+// Affichage produits
+const productList = document.getElementById("productList");
+products.forEach(p => {
+    const div = document.createElement("div");
+    div.className = "product";
+    div.textContent = `${p.name} - ${p.price} €`;
+    div.onclick = () => addToCart(p);
+    productList.appendChild(div);
+});
+
+// Ajout au panier
+function addToCart(product) {
+    cart.push(product);
+    updateCart();
+}
+
+// Suppression d’un article
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
+
+// Mise à jour panier
+function updateCart() {
+    const cartList = document.getElementById("cart");
+    cartList.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - ${item.price} €`;
+
+        const remove = document.createElement("span");
+        remove.className = "remove-btn";
+        remove.textContent = "❌";
+        remove.onclick = () => removeFromCart(index);
+
+        li.appendChild(remove);
+        cartList.appendChild(li);
+
+        total += item.price;
+    });
+
+    document.getElementById("total").textContent = total.toFixed(2);
+}
+
+// Enregistrer une vente
+function saveSale() {
+    const client = document.getElementById("selectedClient").textContent;
+    if (client === "Aucun") {
+        alert("Veuillez sélectionner un client.");
+        return;
+    }
+    if (cart.length === 0) {
+        alert("Le panier est vide.");
+        return;
+    }
+
+    const productsList = cart.map(p => p.name).join(", ");
+    const total = cart.reduce((sum, p) => sum + p.price, 0).toFixed(2);
+    const date = new Date().toLocaleString("fr-FR");
+
+    sales.push({
+        client,
+        products: productsList,
+        total,
+        date
+    });
+
+    alert("Vente enregistrée !");
+
+    // Réinitialisation
+    cart = [];
+    updateCart();
+    document.getElementById("selectedClient").textContent = "Aucun";
+}
+
+// Export CSV des ventes
+function exportSales() {
+    if (sales.length === 0) {
+        alert("Aucune vente à exporter.");
+        return;
+    }
+
+    let csv = "Client;Produits;Total;Date\n";
+
+    sales.forEach(sale => {
+        csv += `${sale.client};"${sale.products}";${sale.total};${sale.date}\n`;
+    });
+
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "ventes.csv";
+    link.click();
+}
+</script>
+
+</body>
+</html>
