@@ -183,9 +183,12 @@ document.getElementById("excelFile").addEventListener("change", function(e) {
         const sheet = workbook.Sheets[workbook.SheetNames[0]];
         const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
-        clients = json
-            .map(row => row[0])
-            .filter(x => x && x.toString().trim() !== "");
+        // On saute la première ligne (titres)
+        clients = json.slice(1).map(row => ({
+            badge: row[0] ? row[0].toString() : "",
+            nom: row[1] ? row[1].toString() : "",
+            prenom: row[2] ? row[2].toString() : ""
+        })).filter(c => c.badge || c.nom || c.prenom);
 
         displayClients(clients);
     };
@@ -200,20 +203,29 @@ function displayClients(list) {
     list.forEach(client => {
         const div = document.createElement("div");
         div.className = "caisse-client-item";
-        div.textContent = client;
+        div.textContent = `${client.badge} – ${client.nom} ${client.prenom}`;
         div.onclick = () => {
-            document.getElementById("selectedClient").textContent = client;
+            document.getElementById("selectedClient").textContent =
+                `${client.badge} – ${client.nom} ${client.prenom}`;
         };
         container.appendChild(div);
     });
 }
 
-// Filtre client
+// Filtre client sur badge + nom + prenom
 function filterClients() {
     const search = document.getElementById("searchClient").value.toLowerCase();
-    const filtered = clients.filter(c => c.toLowerCase().includes(search));
+
+    const filtered = clients.filter(c =>
+        c.badge.toLowerCase().includes(search) ||
+        c.nom.toLowerCase().includes(search) ||
+        c.prenom.toLowerCase().includes(search) ||
+        `${c.nom} ${c.prenom}`.toLowerCase().includes(search)
+    );
+
     displayClients(filtered);
 }
+
 
 // --- Produits ---
 const products = [
